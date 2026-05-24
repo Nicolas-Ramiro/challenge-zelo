@@ -4,17 +4,11 @@ import { StatusBar } from 'expo-status-bar';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import HomeScreen from './screens/HomeScreen';
+import PetsScreen from './screens/PetsScreen';
 
 export interface User {
-  name: string;
-  email: string;
-  password: string;
-  phone: string;
-  cpf: string;
-  address: string;
-  petName: string;
-  petBreed: string;
-  profileImage?: string;
+  name: string; email: string; password: string; phone: string;
+  cpf: string; address: string; petName: string; petBreed: string; profileImage?: string;
 }
 
 export default function App() {
@@ -34,6 +28,7 @@ export default function App() {
       case 'login': return <LoginScreen onLogin={handleLogin} onGoToRegister={handleGoToRegister} />;
       case 'register': return <RegisterScreen onRegister={handleRegister} />;
       case 'home': return <HomeScreen onNavigate={setCurrentScreen} user={user} isDarkMode={isDarkMode} onToggleDarkMode={() => setIsDarkMode(!isDarkMode)} />;
+      case 'pets': return <PetsScreen onNavigate={setCurrentScreen} user={user} isDarkMode={isDarkMode} />;
       default: return <LoginScreen onLogin={handleLogin} onGoToRegister={handleGoToRegister} />;
     }
   };
@@ -46,6 +41,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-});
+const styles = StyleSheet.create({ container: { flex: 1 } });
