@@ -5,9 +5,11 @@
 **Nome do Grupo:** Zelo
 
 **Integrantes e RM:**
-- [Adicione os nomes e RMs dos integrantes aqui]
-
----
+| Nome | RM |
+|------|-----|
+| [Hebert Lopes do santos] | [563192] |
+| [Marcus Vinícius Vila Nova da Silva] | [558771] |
+| [Nicolas Monteiro Ramiro] | [562380] |
 
 ## Descrição da Aplicação
 
@@ -56,7 +58,6 @@ challenge-zelo/
 
 ### Pré-requisitos
 
-- Node.js 18+ instalado
 - npm ou yarn instalado
 - Expo CLI (opcional)
 
@@ -114,12 +115,6 @@ npm run android
 ---
 
 ## Dados Mockados
-
-### Usuário
-- Nome: Carlos Mendes
-- Email: carlos.mendes@email.com
-- CPF: 123.456.789-00
-- Telefone: (11) 98765-4321
 
 ### Pets
 - Luna (Golden Retriever, 4 anos)
