@@ -5,6 +5,7 @@ import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import HomeScreen from './screens/HomeScreen';
 import PetsScreen from './screens/PetsScreen';
+import VitalsScreen from './screens/VitalsScreen';
 
 export interface User {
   name: string; email: string; password: string; phone: string;
@@ -29,6 +30,7 @@ export default function App() {
       case 'register': return <RegisterScreen onRegister={handleRegister} />;
       case 'home': return <HomeScreen onNavigate={setCurrentScreen} user={user} isDarkMode={isDarkMode} onToggleDarkMode={() => setIsDarkMode(!isDarkMode)} />;
       case 'pets': return <PetsScreen onNavigate={setCurrentScreen} user={user} isDarkMode={isDarkMode} />;
+      case 'vitals': return <VitalsScreen onNavigate={setCurrentScreen} isDarkMode={isDarkMode} />;
       default: return <LoginScreen onLogin={handleLogin} onGoToRegister={handleGoToRegister} />;
     }
   };
